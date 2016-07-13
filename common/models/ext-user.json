@@ -1,0 +1,28 @@
+{
+  "name": "ExtUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "avatarUrl": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "song": {
+      "type": "hasMany",
+      "model": "Song",
+      "foreignKey": "ownerId"
+    },
+    "songList": {
+      "type": "hasMany",
+      "model": "SongList",
+      "foreignKey": "ownerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

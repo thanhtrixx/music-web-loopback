@@ -1,0 +1,11 @@
+{
+  "songList": {
+    "album": 0,
+    "playlist": 1
+  },
+  "person": {
+    "artist": 0,
+    "composer": 1,
+    "artist & composer": 2
+  }
+}

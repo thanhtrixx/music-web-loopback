@@ -14,22 +14,54 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongo"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongo",
     "public": false
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongo",
+    "public": false
+  },
+  "PublicResource": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Person": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Song": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "SongList": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Config": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "ExtUser": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "SongPerson": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "SongListSong": {
+    "dataSource": "mongo",
     "public": false
   }
 }

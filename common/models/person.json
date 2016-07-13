@@ -1,0 +1,33 @@
+{
+  "name": "Person",
+  "plural": "People",
+  "base": "PublicResource",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "number",
+      "required": true,
+      "default": "0"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "artist": {
+      "type": "hasMany",
+      "model": "Song",
+      "foreignKey": "artistId",
+      "through": "SongPerson"
+    },
+    "composer": {
+      "type": "hasMany",
+      "model": "Song",
+      "foreignKey": "composerId",
+      "through": "SongPerson"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

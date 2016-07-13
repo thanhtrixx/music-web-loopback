@@ -1,0 +1,30 @@
+{
+  "name": "SongListSong",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "songListType": {
+      "type": "number",
+      "required": true,
+      "default": "0"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "song": {
+      "type": "belongsTo",
+      "model": "Song",
+      "foreignKey": "songId"
+    },
+    "songList": {
+      "type": "belongsTo",
+      "model": "SongList",
+      "foreignKey": "songListId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

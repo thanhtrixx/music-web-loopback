@@ -1,0 +1,31 @@
+{
+  "name": "SongList",
+  "base": "PublicResource",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "songListType": {
+      "type": "number",
+      "required": true,
+      "default": "0"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "ExtUser",
+      "foreignKey": "ownerId"
+    },
+    "songs": {
+      "type": "hasMany",
+      "model": "Song",
+      "foreignKey": "songListId",
+      "through": "SongListSong"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

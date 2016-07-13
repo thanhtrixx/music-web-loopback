@@ -1,0 +1,44 @@
+{
+  "name": "Song",
+  "base": "PublicResource",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "genres": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "ExtUser",
+      "foreignKey": "ownerId"
+    },
+    "artists": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": "songId",
+      "through": "SongPerson"
+    },
+    "composers": {
+      "type": "hasMany",
+      "model": "Person",
+      "foreignKey": "songId",
+      "through": "SongPerson"
+    },
+    "list": {
+      "type": "hasMany",
+      "model": "SongList",
+      "foreignKey": "songId",
+      "through": "SongListSong"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
